@@ -16,7 +16,8 @@ interface Props {
 export function ProgressBar({ total, current }: Props) {
   const percentage = Math.round((current / total) * 100);
   const sharedProgress = useSharedValue(percentage);
-  const styleAnimated = useAnimatedStyle(() => {
+
+  const styledAnimated = useAnimatedStyle(() => {
     return {
       width: `${sharedProgress.value}%`,
     };
@@ -28,7 +29,7 @@ export function ProgressBar({ total, current }: Props) {
 
   return (
     <View style={styles.track}>
-      <Animated.View style={[styles.progress, styleAnimated]} />
+      <Animated.View style={[styles.progress, styledAnimated]} />
     </View>
   );
 }
