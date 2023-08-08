@@ -132,12 +132,6 @@ export function Quiz() {
     setIsLoading(false);
   }, []);
 
-  useEffect(() => {
-    if (quiz.questions) {
-      handleNextQuestion();
-    }
-  }, []);
-
   if (isLoading) {
     return <Loading />;
   }
