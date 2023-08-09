@@ -1,7 +1,15 @@
 import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
-import { Canvas, Skia, Path } from "@shopify/react-native-skia";
+import {
+  Canvas,
+  Skia,
+  Path,
+  useValue,
+  runTiming,
+  BlurMask,
+} from "@shopify/react-native-skia";
 import { styles } from "./styles";
 import { THEME } from "../../styles/theme";
+import { useEffect } from "react";
 
 type Props = TouchableOpacityProps & {
   checked: boolean;
@@ -12,9 +20,18 @@ const CHECK_SIZE = 28;
 const CHECK_STROKE = 2;
 
 export function Option({ checked, title, ...rest }: Props) {
+  const percentage = useValue(0);
   const RADIUS = (CHECK_SIZE - CHECK_STROKE) / 2;
   const path = Skia.Path.Make();
   path.addCircle(CHECK_SIZE, CHECK_SIZE, RADIUS);
+
+  useEffect(() => {
+    if (checked) {
+      runTiming(percentage, 1, { duration: 700 });
+    } else {
+      runTiming(percentage, 0, { duration: 700 });
+    }
+  }, [checked]);
 
   return (
     <TouchableOpacity
@@ -36,8 +53,10 @@ export function Option({ checked, title, ...rest }: Props) {
           style="stroke"
           strokeWidth={CHECK_STROKE}
           start={0}
-          end={0.5}
-        />
+          end={percentage}
+        >
+          <BlurMask blur={1} style="solid" />
+        </Path>
       </Canvas>
     </TouchableOpacity>
   );
