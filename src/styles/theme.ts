@@ -9,6 +9,10 @@ export const THEME = {
     GREY_700: "#29292E",
     GREY_800: "#202024",
 
+    STAR_BLUE: "#57B6E5",
+    STAR_GREEN: "#00B37E",
+    STAR_GRAY: "#6F6F6F",
+
     BRAND_LIGHT: "#00B37E",
     BRAND_MID: "#00875F",
     WARNING_LIGHT: "#FBA94C",
@@ -18,6 +22,6 @@ export const THEME = {
   },
   FONTS: {
     REGULAR: "Roboto_400Regular",
-    BOLD: "Roboto_700Bold"
-  }
+    BOLD: "Roboto_700Bold",
+  },
 };
