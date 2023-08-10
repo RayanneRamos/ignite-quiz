@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Alert, ScrollView, View, Text } from "react-native";
+import { Alert, ScrollView, View, Text, BackHandler } from "react-native";
 import { Audio } from "expo-av";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import * as Haptics from "expo-haptics";
@@ -226,6 +226,15 @@ export function Quiz() {
     const quizSelected = QUIZ.filter((item) => item.id === id)[0];
     setQuiz(quizSelected);
     setIsLoading(false);
+  }, []);
+
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      handleStop
+    );
+
+    return () => backHandler.remove();
   }, []);
 
   if (isLoading) {
