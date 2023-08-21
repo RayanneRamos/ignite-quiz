@@ -39,7 +39,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ```bash
   # Clone o repositório e entre na pasta do projeto
   $ git clone https://github.com/RayanneRamos/ignite-quiz.git
-  $ cd ignite-gym
+  $ cd ignite-quiz
   # Instale as dependências
   $ npm install
   # ou
