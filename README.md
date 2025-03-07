@@ -16,6 +16,12 @@
 
 [Ignite Quiz]() é o segundo projeto desenvolvido durante o bootcamp ignite da [Rocketseat](https://www.rocketseat.com.br/) que foca nas tecnologias ReactJS, React Native e NodeJS. Consiste em criar uma aplicação de quiz que adicionamos algumas animações e micro interações que são disparadas assim que o usuário interage com o app. Disponível nas plataformas Android e IOS.
 
+## 🌟 Funcionalidades
+
+1. **Jogo de Quiz com perguntas e alternativas**
+2. **Animações e microinterações que tornam a experiência mais envolvente**
+3. **Disponível para Android e iOS, permitindo o acesso em qualquer dispositivo móvel**
+
 ## 🧪 Technologies
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
