@@ -22,7 +22,7 @@
 2. **Animações e microinterações que tornam a experiência mais envolvente**
 3. **Disponível para Android e iOS, permitindo o acesso em qualquer dispositivo móvel**
 
-## 🧪 Technologies
+## 🧪 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
